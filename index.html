@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Enviar mensagem</title>
+</head>
+<body>
+  <h1>Enviar mensagem</h1>
+
+  <form action="/enviar-mensagem" method="post">
+    <div>
+      <label for="canal">Canal:</label>
+      <select name="canal" id="canal">
+        <option value="whatsapp">WhatsApp</option>
+        <option value="telegram">Telegram</option>
+        <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem"></textarea>
+    </div>
+
+    <div>
+      <label for="tipo">Tipo:</label>
+      <select name="tipo" id="tipo">
+        <option value="texto">Texto</option>
+        <option value="video">Vídeo</option>
+        <option value="foto">Foto</option>
+        <option value="arquivo">Arquivo</option>
+      </select>
+    </div>
+
+    <div id="arquivo-container" style="display: none;">
+      <label for="arquivo">Arquivo:</label>
+      <input type="file" name="arquivo" id="arquivo">
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
